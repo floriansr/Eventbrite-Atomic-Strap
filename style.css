@@ -10958,7 +10958,9 @@ pre{background:#f7f7f9}
 
 .img-responsive-user-photo {
   vertical-align: middle;
-  border-style: none;
+  border-style: solid;
+  border: 3px;
+  border-color: grey;
   border-radius: 25px;
   margin-right: 10px;
 }
@@ -10983,4 +10985,46 @@ pre{background:#f7f7f9}
   cursor: pointer;
   border-radius: 5px;
   text-align: center;
+}
+
+.contain {
+  border: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: grey;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #f5efea;
+}
+
+.comment {
+display: block;
+padding-left: 40px;
+padding-right: 40px;
+}
+
+.alignement {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background: #f5efea;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.textarea {
+  display: block;
+  background: #fdfcfb;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2px;
+  border-radius: 5px;
+}
+
+.reply {
+  padding-left: 75px;
+  padding-right: 75px;
+  padding-bottom: 16px;
 }
