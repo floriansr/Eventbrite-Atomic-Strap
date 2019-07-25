@@ -433,8 +433,8 @@ h6, .h6 {
 }
 
 hr {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
   border: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -10956,14 +10956,19 @@ pre{background:#f7f7f9}
   border-radius: 0.3rem;
 }
 
+/*------------------------------------
+  Avatar
+------------------------------------*/
+
 .img-responsive-user-photo {
-  vertical-align: middle;
-  border-style: solid;
-  border: 3px;
-  border-color: grey;
+  border: 1px solid white;
   border-radius: 25px;
   margin-right: 10px;
 }
+
+/*------------------------------------
+  Border-bottom Attendees Card
+------------------------------------*/
 
 .media-body {
   -webkit-box-flex: 1;
@@ -10971,21 +10976,29 @@ pre{background:#f7f7f9}
           flex: 1;
 }
 
+/*------------------------------------
+  City Button
+------------------------------------*/
+
 .town_image .btn {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: #555;
-  color: white;
+  background-color: rgba(0, 2, 43,0.65);
+  color: rgba(0,255,255,0.65);
   font-size: 16px;
   padding: 12px 24px;
-  border: none;
+  border: 1px solid aqua;
   cursor: pointer;
   border-radius: 5px;
   text-align: center;
 }
+
+/*------------------------------------
+  Contain
+------------------------------------*/
 
 .contain {
   border: 1px;
@@ -10998,19 +11011,27 @@ pre{background:#f7f7f9}
   background: #f5efea;
 }
 
-.comment {
-display: block;
-padding-left: 40px;
-padding-right: 40px;
-}
+/*------------------------------------
+  Alignement
+------------------------------------*/
 
 .alignement {
   display: flex;
+  flex-direction: row;
   width: 100%;
   justify-content: space-between;
   background: #f5efea;
   align-items: flex-start;
-  flex-direction: row;
+}
+
+/*------------------------------------
+  Comment
+------------------------------------*/
+
+.comment {
+display: block;
+padding-left: 40px;
+padding-right: 40px;
 }
 
 .textarea {
@@ -11028,3 +11049,76 @@ padding-right: 40px;
   padding-right: 75px;
   padding-bottom: 16px;
 }
+
+/*------------------------------------
+  Ressource
+------------------------------------*/
+
+.informations_panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.image-panel {
+  display: block;
+  background-image: url("images/numa.jpg");
+  background-size: 100% 100%;
+  border-top-left-radius: 23px;
+  border-right: 1px grey solid;
+}
+
+.header-ressource {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 300px;
+  border-bottom: 1px grey solid;
+}
+
+.reactions-event {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid grey;
+}
+
+.description {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.big-description {
+  padding: 1em 2em;
+  border-right: 1px solid grey;
+}
+
+.more-details {
+  padding: 1em 15px;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1em;
+  padding-top: 0;
+}
+
+.ressource {
+  border-radius: 24px;
+  border: 1px grey solid;
+  background: #FCF4E4;
+}
+
+/*------------------------------------
+  Bonus
+------------------------------------*/
+
+/*.btn-label {position: relative;left: -5px; display: inline-block; padding: 6px 12px;background: rgba(0,0,0,0.15);border-radius: 3px 0 0 3px;}
+.btn-labeled {padding-top: 0;padding-bottom: 0;}*/
