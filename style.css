@@ -4894,6 +4894,7 @@ input[type="button"].btn-block {
   background-color: #fff;
   background-clip: border-box;
   border-radius: 0.25rem;
+  margin-bottom: 1em;
 }
 
 .card > hr {
@@ -7028,7 +7029,7 @@ button.bg-dark:focus {
 }
 
 .border {
-  border: 1px solid #DFD7CA !important;
+  border: 1px solid grey !important;
 }
 
 .border-top {
@@ -10960,10 +10961,23 @@ pre{background:#f7f7f9}
   Avatar
 ------------------------------------*/
 
-.img-responsive-user-photo {
-  border: 1px solid white;
-  border-radius: 25px;
+.avatar {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+  background-image: url("images/flo.jpg");
   margin-right: 10px;
+  border: 2px solid white;
+  box-shadow: 0 0 10px grey;
+}
+
+.avatar_alex {
+  background-image: url("images/alex.jpg");
+}
+
+.avatar_quentin {
+  background-image: url("images/quentin.jpg");
 }
 
 /*------------------------------------
@@ -11116,6 +11130,100 @@ padding-right: 40px;
   background: #FCF4E4;
 }
 
+/*------------------------------------
+  User profile
+------------------------------------*/
+
+/*------------------------------------
+  Top (navbar, avatar, coverphoto)
+------------------------------------*/
+
+.presentation_user_navbar {
+  border-radius: 0;
+  border-top-left-radius: 23px;
+  border-top-right-radius: 23px;
+  border: 1px grey solid;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin-bottom: 1em;
+}
+
+.cover_photo {
+  background-image: url("images/cover.jpg");
+  background-size: cover;
+  height: 300px;
+  border-top-left-radius: 23px;
+  border-top-right-radius: 23px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.profile_picture {
+  border-radius: 50%;
+  height: 167px;
+  width: 167px;
+  box-shadow: 0 0 10px grey;
+  background-size: cover;
+  background-image: url("images/flo.jpg");
+  border: 5px solid white;
+}
+
+.user_navbar {
+background: #FCF4E4;
+padding: 1em;
+border-top: 1px grey solid;
+}
+
+.disposition_elements_into_coverphoto{
+ display:flex;
+ width: 100%;
+ align-items:flex-end;
+ flex-direction:row;
+ justify-content:space-between;
+ padding-right: 3em;
+ padding-left: 3em;
+}
+
+/*------------------------------------
+  User profile
+------------------------------------*/
+/*------------------------------------
+ table infos
+------------------------------------*/
+
+.table_infos {
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  border: 1px solid grey;
+  border-radius:5px;
+  background: #FCF4E4;
+  padding: 1em;
+  margin-right: 1em;
+}
+
+/*------------------------------------
+  User profile
+------------------------------------*/
+/*------------------------------------
+ table infos
+------------------------------------*/
+.event_index {
+  display: flex;
+  flex-direction: column;
+  padding:0;
+}
+
+.card-body {
+padding: 1em;
+}
+
+.intro {
+  display: inline-flex;
+  align-items:center;
+  justify-content:space-between;
+}
 /*------------------------------------
   Bonus
 ------------------------------------*/
