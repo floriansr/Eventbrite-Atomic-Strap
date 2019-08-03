@@ -75,12 +75,120 @@
     </div>
    </header>
 
+
+    <section class="slice">
+                        <div class="container">
+                            <div class="row align-items-center cols-xs-space cols-sm-space cols-md-space">
+                                <div class="col-lg-6">
+                                    <!-- Map canvas -->
+                                    <div id="google-map">
+                                        <!-- #google-container will contain the map  -->
+                                        <div id="map_canvas" class="map-canvas" style="" data-google-lat="44.450185" data-google-long="26.107762"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-5 ml-lg-auto">
+                                    <h3 class="heading heading-3 strong-300">
+                                        150 Southeast Pidgeon Meadow
+                                        <br>
+                                        Claflin Terrace, 305458
+                                    </h3>
+
+                                    <p class="lead mt-4 mb-4">
+                                        E: <a href="#">support@webpixels.io</a>
+                                        <br>
+                                        T: 0755.222.333
+                                    </p>
+
+                                    <p class="">
+                                        Boomerang is a complete responsive HTML5 Template based on Bootstrap 4 made for Agency, Startup, Business, Finance, Consulting, Real Estate, Recruitment, Travel website and not only.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    </section>
+    </div>
+
+<section class="slice pt-0">
+<div class="d-flex justify-content-center">
+<div class="col-md-3 card-top z-depth-3--hover bg-light">
+    <div class="card-body text-center">
+        <div class="icon-block--style-1-v5">
+            <div class="block-icon block-icon-lg pt-4">
+                <img src="images/business.svg">
+
+            </div>
+            <div class="block-content">
+                <h3 class="heading heading-5 strong-600 text-uppercase">Pro</h3>
+                <ul class="icons text-center mt-4">
+                  <div class="col">
+                    <li class="c-gray-light strong-400">Responsive design</li>
+                    <li class="c-gray-light strong-400">One page layout</li>
+                    <li class="c-gray-light strong-400">Multi page layout</li>
+                    <li class="c-gray-light strong-400">Premium plugins</li>
+                  </div>
+                </ul>
+
+                <span class="price-tag price-tag--1">
+                    <sup>€</sup>
+                    <span class="strong-700">69</span>
+                    <span class="price-type">/mo</span>
+                </span>
+
+                <a href="#" class="btn btn-styled btn-base-1 btn-circle btn-shadow text-uppercase strong-600 mt-3 px-5">Get started</a>
+                <span class="clearfix"></span>
+                <a href="#" class="link link-sm link--style-3 text-capitalize mt-2">Learn more</a>
+            </div> <!-- block_content -->
+        </div> <!-- icon-block-style -->
+    </div> <!-- card-body -->
+  </div> <!-- col-md-3 -->
+  </div> <!-- flex -->
+</section>
+
+
+
    <footer class="footer">
           <span class="text-light">Made by Florian Sueur.</span>
       </footer>
 
   </body>
+    <!-- Google maps -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDBHdHEOtpE1PZ_V4H4B9ugrgniB3o6VI&callback=initMap" type="text/javascript"></script>
+        <script>
+          var map;
 
+        function initMap() {
+            var myLatlng = new google.maps.LatLng(47.609309, -122.333888);
+            var mapOptions = {
+                zoom: 16,
+                scrollwheel: false,
+                center: myLatlng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+            }
+            map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                animation: google.maps.Animation.DROP,
+                title: 'Hello World!'
+            });
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.open(map, marker);
+            });
+        }
+
+            google.maps.event.addDomListener(window, 'load', initMap);
+
+            $('a[data-type="gmap"]').on('shown.bs.tab', function(e) {
+            initialize();
+        })
+        </script>
   <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
